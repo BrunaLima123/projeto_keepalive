@@ -1,0 +1,17 @@
+.timeContainer {
+    flex-direction: row;
+    margin-top: 3%;
+    .number, .division {
+        font-weight: 600;
+        font-family: "quiqsand";
+        font-size: 5rem;
+    }
+}
+
+.timeTextContainer {
+    margin: 0;
+    &__text {
+        font-size: 0.6rem;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,102 @@
+
+
+.Container {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+	width: 50%;
+	background: linear-gradient(#33383D 0%, #1C1D20 100%);
+	color: #E0E0E0;
+	input {
+        width: 100%;
+        background: transparent;
+        color: #E0E0E0;
+        border: 1px solid #E0E0E0;
+        outline: none;
+        border-radius: 30px;
+        font-size: 0.8rem;
+        padding: 15px;
+        margin-right: 2%;
+        
+    }
+	.login {
+		width: 50%;
+		.titleContainer{
+			margin-bottom: 20%;
+			align-self: flex-start;
+			align-items: flex-start;
+			text-align: left;
+			width: 80%;
+			.title {
+				font-weight: normal;
+				font-size: 2.5rem;
+				margin: 0;
+			}
+			.text {
+				font-size: 12px;
+			}
+		}
+		.form {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			align-self: flex-start;
+			align-items: flex-start;
+			.formTitle {
+				font-weight: normal;
+			}
+			.errorContainer {
+				flex-direction: column;
+				justify-content: center;
+				display: none;
+				width: 100%;
+				p {
+					color: #E9B425;
+					font-weight: bold;
+					font-size: 12px;
+					margin: 0;
+				}
+			}
+			.btnContainer {
+				margin-top: 15%;
+				width: 100%;
+				.button {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					text-align: center;
+					width: 90%;
+					align-self: flex-start;
+					padding: 15px;
+					border: none;
+					outline: none;
+					background: linear-gradient(90deg, #FF2D04 0%, #C13216 100%);
+					color: white;
+					font-weight: bold;
+					font-size: 12px;
+					border-radius: 30px;
+				
+				}
+			}
+		}
+	}
+}
+
+.imgLogo {
+
+    text-align: center;
+	justify-content: flex-start;
+	width: 50%;
+	background-image: url("../../assets/images/img-notebook.png");
+	background-position: left 50%;
+	background-size: cover;
+	padding: 15px;
+	img{
+		width: 30%;
+	}
+}
+
+ 
