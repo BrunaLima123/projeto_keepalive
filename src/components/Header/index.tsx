@@ -1,7 +1,7 @@
 import styles from "./HomeClimate.module.scss";
 import imgLogoCompass from "assets/images/logo-compass.png";
 import imgCloud from "assets/images/img-cloud.png";
-import Clock from "pages/Home/Clock";
+import Clock from "components/Clock";
 
 
 export default function Header() {
