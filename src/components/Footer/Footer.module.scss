@@ -1,3 +1,6 @@
+@import "styles/variables";
+
+
 .footer {
 	display: flex;
 	flex-direction: row;
@@ -10,9 +13,9 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		background: linear-gradient(90deg, #33383D 0%, #1C1D20 100%);
+		background: linear-gradient(90deg, $grey 0%, $greyDark 100%);
 		width: 100%;
-		color: white;
+		color: $colorText;
 		font-size: 12px;
 		
 		.textAutentication {
@@ -52,13 +55,13 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		background-color: white;
+		background-color: $colorText;
 		width: 10%;
 		height: 100%;
 	
 		.navText {
 			width: 90%;
-			color: #C13216;	
+			color: $textNav;
 			font-weight: bold;
 			font-size: 12px;
 		}
@@ -72,11 +75,11 @@
 		text-align: center;
 		width: 10%;
 		height: 100%;
-		background-color: #1C1D20;
+		background-color: $greyDark;
 		
 		.logText {
 			font-size: 12px;
-			color: white;
+			color: $colorText;
 		}
 	}
 }

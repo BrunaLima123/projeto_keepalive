@@ -1,4 +1,4 @@
-
+@import "styles/variables";
 
 .Container {
 	display: flex;
@@ -7,13 +7,13 @@
     align-items: center;
     text-align: center;
 	width: 50%;
-	background: linear-gradient(#33383D 0%, #1C1D20 100%);
-	color: #E0E0E0;
+	background: linear-gradient($grey 0%, $greyDark 100%);
+	color: $colorText;
 	input {
         width: 100%;
         background: transparent;
-        color: #E0E0E0;
-        border: 1px solid #E0E0E0;
+        color: $colorText;
+        border: 1px solid $colorText;
         outline: none;
         border-radius: 30px;
         font-size: 0.8rem;
@@ -74,7 +74,7 @@
 					border: none;
 					outline: none;
 					background: linear-gradient(90deg, #FF2D04 0%, #C13216 100%);
-					color: white;
+					color: $colorText;
 					font-weight: bold;
 					font-size: 12px;
 					border-radius: 30px;
