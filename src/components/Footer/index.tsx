@@ -18,7 +18,8 @@ export default function Footer() {
 				</div>
 			</div>
 			<div className={styles.navContainer}>
-				<p className={styles.navText}>Continuar Navegando</p>
+				<p onClick={()=>{window.location.href = 'https://www.google.com'}}className={styles.navText}>Continuar Navegando</p>
+				
 			</div>
 			<div className={styles.logContainer}>
 				<p className={styles.logText}>Logout</p>

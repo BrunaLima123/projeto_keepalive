@@ -1,10 +1,11 @@
 import styles from "./Login.module.scss";
 import imgLogo from "assets/images/logo-compasso.png";
 import { useNavigate } from "react-router-dom";
-import { useContext, useState } from "react";
+import {  useState } from "react";
 import imgUser from "assets/images/icon-user.png"
 import imgPass from "assets/images/icon-password.png";
 import classNames from "classnames";
+
 
 
 export default function Login() {
@@ -12,6 +13,7 @@ export default function Login() {
 	const [ erro, setErro ] = useState(false);
 
       function validaLogin() {
+		
 		let inputs = document.querySelectorAll("input");
 		let valid = true;
 		inputs.forEach(input => {
@@ -35,17 +37,23 @@ export default function Login() {
 					</div>
 				<div className={styles.form}>
 					<h2 className={styles.formTitle}>Login</h2>
-					<input
+					<div className={styles.inputEmail}>
+					<input 
                     type="email"
                     placeholder="Usuário"
+				
                 />
                  <img src={imgUser} alt="User" />
+				 </div>
+				 <div className={styles.inputPassword}>
 				 <input
                     type="password"
                     placeholder="Senha"
-                />
-                <img src={imgPass} alt="Password" />
-					<div className={classNames({[styles.errorContainer]: true,"erro": true})}>
+					
+                /> <img src={imgPass} alt="Password" />
+				</div>
+               
+					<div className={classNames({[styles.errorContainer]: true, [styles.error]: erro})}>
 							<p>Ops, usuário ou senha inválidos.</p>
 							<p>Tente novamente!</p>
 					</div>
