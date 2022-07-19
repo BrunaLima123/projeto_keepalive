@@ -57,12 +57,13 @@ export default function Login() {
 							<p>Ops, usuário ou senha inválidos.</p>
 							<p>Tente novamente!</p>
 					</div>
-					<div className={styles.cadastro}>
-						<p className={styles.cadastre}>Não possui cadastro?<a onClick={() => navigate("cadastro", {replace: true})}> Cadastre-se aqui</a></p>     
-						</div>
 						<div className={styles.btnContainer}>
 							<button onClick={() => validaLogin()}className={styles.button}>Continuar</button>
 						</div>
+						<div className={styles.registerContainer}>
+						<p className={styles.register}>Não possui cadastro?<a onClick={() => navigate("register", {replace: true})}> Cadastrar-se aqui</a></p>     
+						</div>
+						
 					</div>
 				</div>
 			</section>

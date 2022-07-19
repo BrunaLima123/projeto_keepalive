@@ -1,4 +1,4 @@
-import styles from "./Cadastro.module.scss";
+import styles from "./Register.module.scss";
 import imgLogo from "assets/images/logo-compasso.png";
 import { useNavigate } from "react-router-dom";
 import {  useState } from "react";
@@ -33,7 +33,7 @@ export default function Login() {
 			<div className={styles.login}>
 				<div className={styles.titleContainer}>
 					<h1 className={styles.title}>Olá,</h1>
-					<p className={styles.text}>Para continuar navegando de forma segura, efetue o login na rede.</p>
+					<p className={styles.text}>Para continuar navegando de forma segura, efetue o cadastro na rede.</p>
 					</div>
 				<div className={styles.form}>
 					<h2 className={styles.formTitle}>Cadastro</h2>
@@ -57,6 +57,9 @@ export default function Login() {
 							<p>Ops, usuário ou senha inválidos.</p>
 							<p>Tente novamente!</p>
 					</div>
+					<div className={styles.loginContainer}>
+						<p className={styles.login}>Já possui cadastro?<a onClick={() => navigate("/login", {replace: true})}> Faça login aqui</a></p>     
+						</div>
 						<div className={styles.btnContainer}>
 							<button onClick={() => validaLogin()}className={styles.button}>Continuar</button>
 						</div>

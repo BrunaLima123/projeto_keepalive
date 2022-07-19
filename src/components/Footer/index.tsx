@@ -18,7 +18,9 @@ export default function Footer() {
 				</div>
 			</div>
 			<div className={styles.navContainer}>
-				<p onClick={()=>{window.location.href = 'https://www.google.com'}}className={styles.navText}>Continuar Navegando</p>
+				<a href="https://google.com" 
+					target="_blank" 
+					rel="noopener noreferrer"className={styles.navText}>Continuar Navegando</a>
 				
 			</div>
 			<div className={styles.logContainer}>
