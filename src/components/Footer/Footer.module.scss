@@ -4,9 +4,9 @@
 .footer {
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	width: 100%;
-	height: 100%;
+	height: 100%;	
 	
 	.autentication {
 		display: flex;
@@ -15,6 +15,7 @@
 		align-items: center;
 		background: linear-gradient(90deg, $grey 0%, $greyDark 100%);
 		width: 100%;
+		height: 100%;
 		color: $colorText;
 		font-size: 12px;
 		
@@ -22,6 +23,7 @@
 			width: 50%;
 			line-height: 15px;
 			margin-right: 5%;
+			
 			text-align: right;
 		}
 		.textApplication {
