@@ -78,20 +78,17 @@
 			.formTitle {
 				font-weight: normal;
 			}
-			.errorContainer {
+			.erroContainer {
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
-				display: none;
 				width: 100%;
+				margin-top: 20px;
 				p {
 					color: #E9B425;
 					font-weight: bold;
 					font-size: 12px;
 					margin: 0;
-				}
-				.error{
-					display: flex;
 				}
 			}
 			.btnContainer {
@@ -118,6 +115,7 @@
 			}
 		}
 	}
+	
 }
 
 .imgLogo {

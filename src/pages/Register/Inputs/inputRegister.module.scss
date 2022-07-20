@@ -1,0 +1,26 @@
+@import "styles/variables";
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 8px;
+    input {
+        border: solid 1px #FFFFFF;
+        background-color: $greyInput;
+        border-radius: 24px;
+        height: 3rem;
+        width: 19rem;
+        padding: 16px;
+        color: #FFFFFF;
+       
+    }
+    img {
+        padding-left: 8px;
+    }
+}
+
+.imgUser, .imgPassword {
+    width: 30px;
+}

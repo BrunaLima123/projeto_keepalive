@@ -1,31 +1,54 @@
 import styles from "./Register.module.scss";
 import imgLogo from "assets/images/logo-compasso.png";
 import { useNavigate } from "react-router-dom";
-import {  useState } from "react";
-import imgUser from "assets/images/icon-user.png"
-import imgPass from "assets/images/icon-password.png";
+import {  useState, useContext } from "react";
+import InputSingUpEmail from 'pages/Register/Inputs/inputRegisterEmail';
+import InputSingUpPassword from 'pages/Register/Inputs/inputRegisterPass';
 import classNames from "classnames";
+import { RegisterUserContext } from 'common/context/registerUser';
+import {getAuth,createUserWithEmailAndPassword} from "firebase/auth";
+import { getFirestore, addDoc, collection } from "firebase/firestore";
 
+const db = getFirestore(); 
+const auth = getAuth();
 
 
 export default function Login() {
 	const navigate = useNavigate();
+   const { email, password } = useContext(RegisterUserContext);
 	const [ erro, setErro ] = useState(false);
 
       function validaLogin() {
-		
+		event?.preventDefault()
 		let inputs = document.querySelectorAll("input");
-		let valid = true;
+		let valida = true;
 		inputs.forEach(input => {
-			if(input.value == "") {
-				valid = false;
-				input.style.border = "1px solid #E9B425";
+			if(input.value == "") {valida = false; input.style.border = "1px solid #E9B425";
 				setErro(true);
+				return
 			}else {
-			navigate("/home")
+				const userCredential = createUserWithEmailAndPassword(auth,email,password).then((response)=>{
+					alert('cadastrado com sucesso!');
+				console.log(response);
+				})
+
 		}
+
 	
 });
+const signUp = async (email: string, password: string) => {
+	try {
+	const userCredential = await createUserWithEmailAndPassword(auth,email,password);
+	const user = userCredential.user;
+	await addDoc(collection(db, "users"), {
+	uid: user.uid,
+	email: user.email,
+	});
+	return true
+	} catch (err) {
+		console.error(err);
+	}
+   };
 }
 	return (
 		<>
@@ -37,31 +60,15 @@ export default function Login() {
 					</div>
 				<div className={styles.form}>
 					<h2 className={styles.formTitle}>Cadastro</h2>
-					<div className={styles.inputEmail}>
-					<input 
-                    type="email"
-                    placeholder="Usuário"
-				
-                />
-                 <img src={imgUser} alt="User" />
-				 </div>
-				 <div className={styles.inputPassword}>
-				 <input
-                    type="password"
-                    placeholder="Senha"
-					
-                /> <img src={imgPass} alt="Password" />
-				</div>
-               
-					<div className={classNames({[styles.errorContainer]: true, [styles.error]: erro})}>
-							<p>Ops, usuário ou senha inválidos.</p>
-							<p>Tente novamente!</p>
-					</div>
-					<div className={styles.loginContainer}>
-						<p className={styles.login}>Já possui cadastro?<a onClick={() => navigate("/login", {replace: true})}> Faça login aqui</a></p>     
-						</div>
+					<InputSingUpEmail/>
+				   <InputSingUpPassword/>
+				   {erro && <div className={styles.erroContainer}><p>Ops, usuário ou senha inválidos.</p>
+                        <p>Tente novamente!</p>   </div>}
 						<div className={styles.btnContainer}>
 							<button onClick={() => validaLogin()}className={styles.button}>Continuar</button>
+						</div>
+						<div className={styles.loginContainer}>
+						<p className={styles.loginText}>Já possui cadastro?<a onClick={() => navigate("/login", {replace: true})}> Entrar</a></p>     
 						</div>
 					</div>
 				</div>
