@@ -21,13 +21,13 @@ export default function Login() {
       function validaLogin() {
 		event?.preventDefault()
 		let inputs = document.querySelectorAll("input");
-		let valida = true;
+		let validaInput = true;
 		inputs.forEach(input => {
-			if(input.value == "") {valida = false; input.style.border = "1px solid #E9B425";
+			if(input.value == "") {validaInput = false; input.style.border = "1px solid #E9B425";
 				setErro(true);
 				return
 			}else {
-				const userCredential = createUserWithEmailAndPassword(auth,email,password).then((response)=>{
+				createUserWithEmailAndPassword(auth,email,password).then((response)=>{
 					alert('cadastrado com sucesso!');
 				console.log(response);
 				})
@@ -63,7 +63,7 @@ const signUp = async (email: string, password: string) => {
 					<InputSingUpEmail/>
 				   <InputSingUpPassword/>
 				   {erro && <div className={styles.erroContainer}><p>Ops, usuário ou senha inválidos.</p>
-                        <p>Tente novamente!</p>   </div>}
+                        <p>Tente novamente!</p></div>}
 						<div className={styles.btnContainer}>
 							<button onClick={() => validaLogin()}className={styles.button}>Continuar</button>
 						</div>

@@ -8,49 +8,7 @@
 	width: 50%;
 	background: linear-gradient($grey 0%, $greyDark 100%);
 	color: $colorText;
-
-	.inputEmail{
-		width: 90%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: row;
-		margin-bottom: 8px;
-		
-	input {
-        width: 100%;
-        background: transparent;
-        color: $colorText;
-        border: 1px solid $colorText;
-        outline: none;
-        border-radius: 30px;
-        font-size: 0.8rem;
-        padding: 15px;
-        margin-right: 3%;
-	}
-}
-
-	.inputPassword{
-		width: 90%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: row;
-		margin-bottom: 8px;
 	
-	input {
-        width: 100%;
-        background: transparent;
-        color: $colorText;
-        border: 1px solid $colorText;
-        outline: none;
-        border-radius: 30px;
-        font-size: 0.8rem;
-        padding: 15px;
-		margin-top: 15px;
-        margin-right: 3%;
-	}
-    }
 	.login {
 		width: 50%;
 		.titleContainer{
@@ -106,6 +64,7 @@
 					border: none;
 					outline: none;
 					background: linear-gradient(90deg, #FF2D04 0%, #C13216 100%);
+					box-shadow:  5px 5px 15px rgba(0, 0, 0, 0.15);
 					color: $colorText;
 					font-weight: bold;
 					font-size: 12px;

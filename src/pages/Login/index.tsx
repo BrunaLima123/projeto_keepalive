@@ -7,7 +7,6 @@ import {  useState, useContext } from "react";
 import { UserContext } from "common/context/user";
 import InputLoginEmail from 'pages/Login/Inputs/inputLoginEmail';
 import InputLoginPassword from 'pages/Login/Inputs/inputLoginPass';
-import classNames from "classnames";
 
 //const auth = getAuth();
 
@@ -20,12 +19,12 @@ export default function Login() {
 		event?.preventDefault()
         
 		let inputs = document.querySelectorAll("input");
-		let valida = true;
+		let validaInput = true;
 		inputs.forEach(input => {
-			if(input.value == "") {valida = false; input.style.border = "1px solid #E9B425";
+			if(input.value == "") {validaInput = false; input.style.border = "1px solid #E9B425";
 				setErro(true);
 			}else {
-                const userCredential = signInWithEmailAndPassword(
+               signInWithEmailAndPassword(
                     auth,
                     email,
                     password
@@ -36,7 +35,7 @@ export default function Login() {
                         setErro(true)
                     console.log(erro);
                     })
-			//signIn(email, password)
+			
 
 		}
 	});
