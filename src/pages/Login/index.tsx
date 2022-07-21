@@ -1,9 +1,9 @@
 import styles from "./Login.module.scss";
 import imgLogo from "assets/images/logo-compasso.png";
-import {getAuth,signInWithEmailAndPassword} from "firebase/auth";
-import {auth} from "../../firebase"
+import {signInWithEmailAndPassword} from "firebase/auth";
+import {auth} from "../../firebase";
 import { useNavigate } from "react-router-dom";
-import {  useState, useContext } from "react";
+import {  useState, useEffect, useContext } from "react";
 import { UserContext } from "common/context/user";
 import InputLoginEmail from 'pages/Login/Inputs/inputLoginEmail';
 import InputLoginPassword from 'pages/Login/Inputs/inputLoginPass';
@@ -15,6 +15,7 @@ export default function Login() {
 	const { email, setEmail, password, setPassword } = useContext(UserContext);
 	const [ erro, setErro ] = useState(false);
 
+ 
       function validaLogin() {
 		event?.preventDefault()
         
@@ -30,10 +31,10 @@ export default function Login() {
                     password
                     ).then((response)=>{
                         navigate('home');
-                    console.log(response);
+                    
                     }).catch((erro)=>{
                         setErro(true)
-                    console.log(erro);
+                   
                     })
 			
 
@@ -50,6 +51,7 @@ export default function Login() {
 			const user = userCredential.user;
 			return true
 			} catch (err) {
+                setErro(true)
 				console.error(err);
 			}
 		   };
