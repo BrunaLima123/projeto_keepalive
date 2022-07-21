@@ -20,9 +20,8 @@ export default function Login() {
 		event?.preventDefault()
         
 		let inputs = document.querySelectorAll("input");
-		let validaInput = true;
 		inputs.forEach(input => {
-			if(input.value == "") {validaInput = false; input.style.border = "1px solid #E9B425";
+			if(input.value == "") { input.style.border = "1px solid #E9B425";
 				setErro(true);
 			}else {
                signInWithEmailAndPassword(
@@ -34,11 +33,10 @@ export default function Login() {
                     
                     }).catch((erro)=>{
                         setErro(true)
-                   
+                        input.style.border = "";
+                        erro.style.display = "none";
                     })
-			
-
-		}
+                }
 	});
 		const signIn = async (email: string, password: string) => {
             console.log(email,password);
@@ -77,7 +75,7 @@ return (
                         <button onClick={() => validaLogin()}className={styles.button}>Continuar</button>
                     </div>
                     <div className={styles.registerContainer}>
-                    <p className={styles.register}>Não possui cadastro?<a onClick={() => navigate("register", {replace: true})}> Cadastre-se aqui</a></p>     
+                    <p className={styles.register}>Não possui cadastro?<a onClick={() => navigate("/register", {replace: true})}> Cadastre-se aqui</a></p>     
                     </div>
                     
                 </div>

@@ -1,6 +1,6 @@
 import styles from "./Register.module.scss";
 import imgLogo from "assets/images/logo-compasso.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, } from "react-router-dom";
 import {  useState, useContext } from "react";
 import InputSingUpEmail from 'pages/Register/Inputs/inputRegisterEmail';
 import InputSingUpPassword from 'pages/Register/Inputs/inputRegisterPass';
@@ -71,7 +71,7 @@ return (
 					<button onClick={() => validaLogin()}className={styles.button}>Continuar</button>
 					</div>
 					<div className={styles.loginContainer}>
-		<p className={styles.loginText}>Já possui cadastro?<a onClick={() => navigate("/login", {replace: true})}> Entrar</a></p>     
+		<p className={styles.loginText}>Já possui cadastro?<a onClick={() => navigate("/", {replace: true})}> Entrar</a></p>     
 						</div>
 					</div>
 				</div>
