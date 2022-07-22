@@ -65,6 +65,7 @@ return (
 			<h2 className={styles.formTitle}>Cadastro</h2>
 			<InputSingUpEmail/>
 			<InputSingUpPassword/>
+			
 			{erro && <div className={styles.erroContainer}>
 				<p>Ops, usuário ou senha inválidos.</p><p>Tente novamente!</p></div>}
 				 <div className={styles.btnContainer}>

@@ -42,12 +42,16 @@
 				justify-content: center;
 				width: 100%;
 				margin-top: 20px;
+				input{
+					border: #E9B425 ;	
+				}
 				p {
 					color: #E9B425;
 					font-weight: bold;
 					font-size: 12px;
 					margin: 0;
 				}
+				
 				.erro{
 					display: flex
 				}

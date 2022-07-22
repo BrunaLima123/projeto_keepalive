@@ -19,6 +19,25 @@
     img {
         padding-left: 8px;
     }
+    .userActive {
+        padding-right: 12%;
+        background-image: url("../../../assets/images/icon-user.png");
+        background-repeat: no-repeat;
+        background-position: center right 5%;
+        background-size: 15px;
+        transition: 0s;
+    }
+    .passwordActive {
+        padding-right: 12%;
+        background-image: url("../../../assets/images/icon-password.png");
+        background-repeat: no-repeat;
+        background-position: center right 5%;
+        background-size: 15px;
+        transition: 0s;
+    }
+    .iconNo {
+        display: none;
+    }
 }
 
 .imgUser, .imgPassword {

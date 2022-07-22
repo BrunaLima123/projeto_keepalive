@@ -3,12 +3,11 @@ import imgLogo from "assets/images/logo-compasso.png";
 import {signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../../firebase";
 import { useNavigate } from "react-router-dom";
-import {  useState, useEffect, useContext } from "react";
+import {  useState, useContext } from "react";
 import { UserContext } from "common/context/user";
 import InputLoginEmail from 'pages/Login/Inputs/inputLoginEmail';
 import InputLoginPassword from 'pages/Login/Inputs/inputLoginPass';
 
-//const auth = getAuth();
 
 export default function Login() {
 	const navigate = useNavigate();
@@ -16,9 +15,7 @@ export default function Login() {
 	const [ erro, setErro ] = useState(false);
 
  
-      function validaLogin() {
-		event?.preventDefault()
-        
+      function validaLogin() {  
 		let inputs = document.querySelectorAll("input");
 		inputs.forEach(input => {
 			if(input.value == "") { input.style.border = "1px solid #E9B425";
@@ -33,8 +30,7 @@ export default function Login() {
                     
                     }).catch((erro)=>{
                         setErro(true)
-                        input.style.border = "";
-                        erro.style.display = "none";
+                        
                     })
                 }
 	});
@@ -75,7 +71,7 @@ return (
                         <button onClick={() => validaLogin()}className={styles.button}>Continuar</button>
                     </div>
                     <div className={styles.registerContainer}>
-                    <p className={styles.register}>Não possui cadastro?<a onClick={() => navigate("/register", {replace: true})}> Cadastre-se aqui</a></p>     
+                    <p className={styles.register}>Não possui cadastro?<a onClick={() => navigate("register", {replace: true})}> Cadastre-se aqui</a></p>     
                     </div>
                     
                 </div>
