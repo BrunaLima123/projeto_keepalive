@@ -15,8 +15,8 @@
 		flex-direction: column;
 		align-items: flex-end;
 		justify-content: flex-end;
-		margin-right: 5rem;
-		margin-top: 5rem;
+		margin-right: 80px;
+		margin-top: 80px;
 		margin-bottom: 6%;
 
 		.pFirst {
@@ -37,5 +37,36 @@
 			font-size: 16px;
 			margin-top: 0;
 		}
-	}}
+	}
+}
 
+@media (min-width: 320px) and (max-width:425px){
+
+.container {
+	background-size: 45%;
+	background-position-y: 90%;
+	.containerText {
+		margin-right: 0;
+		margin-bottom: 40%;
+
+		.pFirst {
+			font-size: 14px;
+			margin-right: 5px;
+			color: $textHome;
+		}
+		.pEnglish {
+			font-size: 17px;
+			letter-spacing: 2px;
+			margin-right: 5px;
+			color: $textHome;
+		}
+	
+		.pPortugues {
+			font-size: 14px;
+			margin-right: 5px;
+			margin-top: 0;
+		}
+
+	}
+}
+}

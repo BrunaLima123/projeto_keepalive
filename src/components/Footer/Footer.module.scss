@@ -28,7 +28,6 @@
 		}
 		.textApplication {
 			display: flex;
-			justify-content: center;
 			align-items: center;
 			text-align: center;
 			flex-direction: row;
@@ -84,4 +83,43 @@
 			color: $colorText;
 		}
 	}
+}
+
+@media (min-width: 320px) and (max-width:425px){
+.footer {
+	flex-direction: column;
+	.autentication {
+		font-size: 8px;
+		
+		.textApplication {
+			width: 30%;
+			.refresh {
+				margin-right: 20%;
+				width: 20%;
+				text-align: right;
+			}
+			.secondsContainer{
+				width: 45%;
+				.seconds {
+					font-size: 20px;
+				}
+				p {
+					margin: 0;	
+				}
+			}
+		}
+	}
+	.navContainer {
+		width: 100%;
+	
+		.navText {
+			width: 90%;
+		}
+	}
+	.logContainer {
+		width: 100%;
+
+	}
+}
+
 }
