@@ -11,10 +11,9 @@
         }
     }
 
-    @media (max-width: 320px){
+    @media (min-width: 320px)and(max-width:425px){
     
         .climateContainer {
-            padding-top: 15px;
             margin-right: 6px;
             width: 100px;
             .place {
@@ -30,4 +29,22 @@
             }
     
     
+    }
+
+    @media(min-width: 2560px){
+        .climateContainer {
+            .place {
+                font-size: 30px;
+            }
+            img{
+                width: 70px;
+            }
+                span {
+                    font-size: 50px;
+                }
+    
+    
+    
+    }
+
     }

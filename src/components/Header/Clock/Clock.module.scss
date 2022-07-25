@@ -20,7 +20,7 @@
 
     .Clock {
         margin-right: 45%;
-        margin-top: 50%;
+        margin-top: 20%;
         margin-left: 25%;
         .number, .spots {
             font-size: 20px;
@@ -30,7 +30,7 @@
     .clockTextContainer {
         margin-right: 30px;
         .text {
-            font-size: 12px;
+            font-size: 10px;
             font-weight: bold;
             margin-left: 25%;
           
@@ -40,4 +40,20 @@
     }
 
 
+}
+@media (min-width: 2560px){
+
+    .Clock {
+        margin-top: 5%;
+        .number, .spots {
+            font-size: 80px;
+        }
+    }
+    
+    .clockTextContainer {
+        margin: 0;
+        .text {
+            font-size: 30px;
+        }
+    }
 }

@@ -7,7 +7,7 @@ import {UserContext} from "../../common/context/user"
 export default function Footer() {
 	const [timer, setTimer] = useState(60)
 	const navigate = useNavigate();	
-	const { setEmail, setEmailValid, setPassword, setPassValid } = useContext(UserContext);
+	const { setEmail, setEmailValidation, setPassword, setPasswordValidation } = useContext(UserContext);
 
     if(timer <= 0) navigate('/'), clearContext()
     setTimeout(()=>{setTimer(timer - 1)}, 900)
@@ -15,8 +15,8 @@ export default function Footer() {
 	function clearContext() {
 		setEmail("");
 		setPassword("");
-		setEmailValid(false);
-		setPassValid(false);
+		setEmailValidation(false);
+		setPasswordValidation(false);
 	}
 
 

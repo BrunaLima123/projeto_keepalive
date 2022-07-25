@@ -43,8 +43,8 @@
 @media (min-width: 320px) and (max-width:425px){
 
 .container {
-	background-size: 45%;
-	background-position-y: 90%;
+	background-position-y: 82%;
+	background-size: 30%;
 	.containerText {
 		margin-right: 0;
 		margin-bottom: 40%;
@@ -52,21 +52,103 @@
 		.pFirst {
 			font-size: 14px;
 			margin-right: 5px;
-			color: $textHome;
+
 		}
 		.pEnglish {
-			font-size: 17px;
+			font-size: 17.4px;
 			letter-spacing: 2px;
 			margin-right: 5px;
-			color: $textHome;
 		}
 	
 		.pPortugues {
 			font-size: 14px;
 			margin-right: 5px;
-			margin-top: 0;
 		}
 
 	}
 }
 }
+
+@media (min-width: 450px) and (max-width:768px){
+
+	.container {
+
+		.containerText {
+			margin-right: 20px;
+			margin-bottom: 10%;
+	
+			.pFirst {
+				font-size: 20px;
+				margin-right: 5px;
+				color: $textHome;
+			}
+			.pEnglish {
+				font-size: 28px;
+				letter-spacing: 2px;
+				margin-right: 5px;
+				color: $textHome;
+			}
+		
+			.pPortugues {
+				font-size: 20px;
+				margin-right: 5px;
+				margin-top: 0;
+			}
+	
+		}
+	}
+	}
+
+	@media (min-width: 770px) and (max-width:1024px){
+
+		.container {
+			.containerText {
+				margin-right: 25px;
+				//margin-bottom: 10%;
+	
+		
+			}
+		}
+		}
+
+		@media (min-width: 1440px){
+
+			.container {
+				.containerText {
+					margin-right: 40px;
+					margin-bottom: 15%;
+		
+			
+				}
+			}
+			}
+	
+	@media (min-width:2560px ){
+	
+		.container {	
+			background-position-y: 85%;
+			.containerText {
+				margin-right: 60px;
+				margin-bottom: 15%;
+		
+				.pFirst {
+					font-size: 40px;
+					margin-right: 5px;
+					color: $textHome;
+				}
+				.pEnglish {
+					font-size: 48px;
+					letter-spacing: 2px;
+					margin-right: 5px;
+					color: $textHome;
+				}
+			
+				.pPortugues {
+					font-size: 40px;
+					margin-right: 5px;
+					margin-top: 0;
+				}
+		
+			}
+		}
+		}
