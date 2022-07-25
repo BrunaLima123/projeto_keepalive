@@ -6,22 +6,41 @@ import classNames from "classnames";
 
 
 
-export default function InputSignUpPassword() {
-    const { password, setPassword } = useContext(RegisterUserContext);
+export default function ValidaRegisterPassword() {
+    const { password, setPassword,
+        numberValidation,
+        uppercaseValidation, 
+        lowercaseValidation, 
+        charValidation, 
+        setCharValidation,
+        setUppercaseValidation,
+        setLowercaseValidation,
+        setNumberValidation, setPasswordValidation } = useContext(RegisterUserContext);
     const [inactive, setInactive] = useState(false);
-   /*const [validateInput, setValidateInput] = useState({case: false, number: false, length: false})
-    const secureText = (password: string) => {
-            const regexUppercase = new RegExp(/^(?=.*[A-Z]).+$/)
-            const regexLowercase = new RegExp(/^(?=.*[a-z]).+$/)
-            const regexNumber = new RegExp(/^(?=.*[0-9]).+$/)
-            const length = password.length >= 6
-            setValidateInput({
-                case: regexUppercase.test(password) && regexLowercase.test(password),
-                number: regexNumber.test(password),
-                length
-            })
-        }*/
- 
+    const validations = [numberValidation, uppercaseValidation, lowercaseValidation, charValidation];
+   
+    useEffect(() => {
+        const numberValidation = /[0-9]/;
+        const lowercaseValidation = /[a-z]/;
+        const uppercaseValidation = /[A-Z]/;
+
+
+        password.length < 6 ? setCharValidation(false) : setCharValidation(true);
+        numberValidation.test(password) ? setNumberValidation(true) : setNumberValidation(false);
+        lowercaseValidation.test(password) ? setLowercaseValidation(true) : setLowercaseValidation(false);
+        uppercaseValidation.test(password) ? setUppercaseValidation(true) : setUppercaseValidation(false);
+     
+    }, [password])
+
+    function validatePassword() {
+        validations.every(allTrue) ? setPasswordValidation(true) : setPasswordValidation(false);
+    }
+
+    function allTrue(validation: boolean) {
+        return validation == true;
+    }
+
+
         useEffect(()=> {
             if(password !== ""){
                 setInactive(true);
@@ -32,11 +51,12 @@ export default function InputSignUpPassword() {
         <div className={styles.inputContainer}>
             <input className={classNames({[styles["passwordActive"]]: inactive,})}
              type="password" placeholder="Senha" value={ password }
+             onBlur={() => (validatePassword())}
             onChange={(event) => (setPassword(event.target.value))}/>
             <img 
              className={classNames({
                 [styles.iconNo]: inactive
-            })}src={imgPassword} alt="Password"/>
+            })}src={imgPassword} alt="Password"/>   
         </div>
         
     )

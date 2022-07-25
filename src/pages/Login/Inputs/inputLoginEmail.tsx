@@ -5,8 +5,13 @@ import styles from './inputLogin.module.scss';
 import classNames from "classnames";
 
 export default function InputLoginEmail() {
-    const { email, setEmail } = useContext(UserContext);
+    const { email, setEmail, setEmailValidation} = useContext(UserContext);
     const [inactive, setInactive] = useState(false);
+    const validationEmail = /^([a-z]){1,}([a-z0-9._-]){1,}([@]){1}([a-z]){2,}([.]){1}([a-z]){2,}([.]?){1}([a-z]?){2,}$/i;
+   
+    useEffect(() => {
+        validationEmail.test(email.toLowerCase()) ? setEmailValidation(true) : setEmailValidation(false);
+    }, [email]);
 
     useEffect(()=> {
         if(email !== ""){

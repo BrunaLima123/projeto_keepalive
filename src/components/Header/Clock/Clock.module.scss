@@ -15,3 +15,29 @@
         font-weight: bold;
     }
 }
+
+@media (min-width: 320px) and (max-width: 425px){
+
+    .Clock {
+        margin-right: 45%;
+        margin-top: 50%;
+        margin-left: 25%;
+        .number, .spots {
+            font-size: 20px;
+        }
+    }
+    
+    .clockTextContainer {
+        margin-right: 30px;
+        .text {
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 25%;
+          
+            
+        }
+    
+    }
+
+
+}

@@ -4,9 +4,15 @@ import imgUser from 'assets/images/icon-user.png';
 import classNames from "classnames";
 import styles from './inputRegister.module.scss';
 
-export default function InputSignUpEmail() {
-    const { email, setEmail } = useContext(RegisterUserContext);
+export default function ValidaRegisterEmail() {
+    const { email, setEmail, setEmailValidation } = useContext(RegisterUserContext);
     const [inactive, setInactive] = useState(false);
+    const validationEmail = /^([a-z]){1,}([a-z0-9._-]){1,}([@]){1}([a-z]){2,}([.]){1}([a-z]){2,}([.]?){1}([a-z]?){2,}$/i;
+   
+    useEffect(() => {
+        validationEmail.test(email.toLowerCase()) ? setEmailValidation(true) : setEmailValidation(false);
+    }, [email]);
+
     useEffect(()=> {
         if(email !== ""){
             setInactive(true);

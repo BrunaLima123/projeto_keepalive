@@ -19,7 +19,7 @@
 			width: 80%;
 			.title {
 				font-weight: normal;
-				font-size: 2.5rem;
+				font-size: 40px;
 				margin: 0;
 			}
 			.text {
@@ -45,6 +45,7 @@
 				input{
 					border: #E9B425 ;	
 				}
+
 				p {
 					color: #E9B425;
 					font-weight: bold;
@@ -80,6 +81,12 @@
 				
 				}
 			}
+			.registerContainer{
+				display: flex;
+				align-items: center;
+				text-align: center;
+
+			}
 		}
 	}
 }
@@ -98,4 +105,133 @@
 	}
 }
 
- 
+
+@media (min-width: 2560px) and (max-width:2560px) {
+    .Container {
+		.login {
+			.titleContainer{
+				.title {
+					font-weight: normal;
+					font-size: 40px;
+					margin: 0;
+				}
+				.text {
+					font-size: 30px;
+				
+				}
+			}
+		}
+		.form {
+			.formTitle {
+			font-size: 30px;
+			}
+			.btnContainer{
+				
+			
+				.button {
+					font-size: 20px;
+					height: 50px;
+					
+		}
+	}
+		.registerContainer{
+			font-size: 30px;
+		}
+	}
+	
+}
+	}
+
+	@media (min-width: 768px)and(max-width: 1023px){
+		.Container {
+			.login {
+				.titleContainer{
+					margin-top: 10%;
+					.title {
+						font-weight: normal;
+						font-size: 20px;
+						margin:0px
+					}
+					.text {
+						font-size: 10px;
+					
+					}
+				}
+			}
+			.form {
+				.formTitle {
+				font-size: 20px;
+				}
+			.registerContainer{
+				font-size: 10px;
+			}
+		}
+
+	}
+}
+@media (min-width: 1024px) and (max-width:1024px) {
+	.Container {
+		.login {
+			.titleContainer{
+				.title {
+					font-size: 30px;
+					margin:0px
+				}
+				.text {
+					font-size: 12px;
+				
+				}
+			}
+		}
+		.form {
+			.formTitle {
+			font-size: 20px;
+			}
+		.registerContainer{
+			font-size: 12px;
+		}
+	}
+
+}
+}
+
+@media (max-width: 425px) {
+
+	.Container {
+		width: 100%;
+
+		.login {
+			.titleContainer{
+				.title {
+					font-size: 20px;
+					margin:0px
+				}
+				.text {
+					font-size: 10px;
+				
+				}
+			}
+		}
+		.form {
+			.formTitle {
+			font-size: 20px;
+			}
+		.registerContainer{
+			font-size: 12px;
+		}
+		.registerLogin{
+			color: #E9B425;
+		}
+	}
+
+}
+.imgLogo {
+display: none;
+	img{
+		display: none;
+	}
+}
+
+}
+
+

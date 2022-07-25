@@ -1,13 +1,25 @@
 import styles from "./Footer.module.scss";
 import imgLine from "assets/images/line.png";
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
+import {UserContext} from "../../common/context/user"
 
 export default function Footer() {
-	const [timer, setTimer] = useState(60)
-    if(timer <= 0) window.location.reload()
-    setTimeout(()=>{setTimer(timer - 1)}, 1000)
-	const navigate = useNavigate();
+	//const [timer, setTimer] = useState(60)
+	const navigate = useNavigate();	
+	const { setEmail, setEmailValid, setPassword, setPassValid } = useContext(UserContext);
+
+    // if(timer <= 0) navigate('/'), clearContext()
+    // setTimeout(()=>{setTimer(timer - 1)}, 900)
+
+	function clearContext() {
+		setEmail("");
+		setPassword("");
+		setEmailValid(false);
+		setPassValid(false);
+	}
+
+
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.autentication}>	
@@ -18,7 +30,8 @@ export default function Footer() {
 				<div className={styles.textApplication}>
 					<p className={styles.refresh}>Application refresh in</p>
 					<div className={styles.secondsContainer}>
-						<p className={styles.seconds}>{timer}</p>
+				<p className={styles.seconds}></p> 
+				{/* {timer}		 */}
 						<p>seconds</p>
 					</div>
 				</div>
@@ -31,7 +44,7 @@ export default function Footer() {
 			</div>
 			<div className={styles.logContainer}>
 				<p onClick={() => (
-                        navigate("/", {replace: true}))} className={styles.logText}>Logout</p>
+                       clearContext(),  navigate("/", {replace: true}))} className={styles.logText}>Logout</p>
 			</div>
 		</footer>
 	);

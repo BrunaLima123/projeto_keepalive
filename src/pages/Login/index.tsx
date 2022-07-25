@@ -71,16 +71,16 @@ return (
                         <button onClick={() => validaLogin()}className={styles.button}>Continuar</button>
                     </div>
                     <div className={styles.registerContainer}>
-                    <p className={styles.register}>Não possui cadastro?<a onClick={() => navigate("register", {replace: true})}> Cadastre-se aqui</a></p>     
+                    <p className={styles.register}>Não possui cadastro?<a className={styles.registerLogin} onClick={() => navigate("register", {replace: true})}> Cadastre-se aqui</a></p>     
                     </div>
                     
                 </div>
                 
             </div>
         </section>
-        <section className={styles.imgLogo}>
+        <div className={styles.imgLogo}>
             <img src={imgLogo} alt="Compass Logo" />
-        </section>
+        </div>
     </>
 
 );

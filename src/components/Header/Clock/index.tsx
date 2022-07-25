@@ -3,8 +3,10 @@ import styles from "./Clock.module.scss";
 export default function Clock() {
     const date = new Date();
     return(
-        <>
+    
+            <div className={styles.ClockContainer}>
             <div className={styles.Clock}>
+
     <span className={styles.number}>{date.getHours()}</span>
     <span className={styles.spots}>:</span><span className={styles.number}>{date.getMinutes()}</span>
             </div>
@@ -15,6 +17,7 @@ export default function Clock() {
                     }
                 </span>
             </div>
-        </>
+            </div>
+        
     );
 }

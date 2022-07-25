@@ -44,3 +44,61 @@
     width: 30px;
     padding-left: 8px;
 }
+
+@media (min-width: 2560px)and(max-width: 2560px){
+    .inputContainer {
+	input {
+		width: 35rem;
+        height: 3.5rem;
+        margin-top: 10px;
+        font-size:20px
+	}
+}
+}
+
+@media (min-width: 768px)and(max-width: 1023px){
+    .inputContainer {
+        input {
+            width: 11rem;
+            height: 1.5rem;
+            margin-top: 10px;
+            font-size:15px
+        }
+    }
+
+}
+
+@media (min-width: 1024px)and(max-width: 1024px){
+    .inputContainer {
+        input {
+            width: 14rem;
+            height: 1.5rem;
+            margin-top: 10px;
+            font-size:15px
+        }
+    }
+
+}
+
+@media (max-width: 425px) {
+    .inputContainer {
+        input {
+            width: 12.2rem;
+            height: 1.5rem;
+            margin-top: 10px;
+            font-size:15px
+        }
+    }
+
+}
+@media (max-width: 320px) {
+    .inputContainer {
+        input {
+            width: 10rem;
+            height: 1.5rem;
+            margin-top: 10px;
+            font-size:15px
+        }
+    }
+
+}

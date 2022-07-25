@@ -10,3 +10,24 @@
             margin-left: 5%;
         }
     }
+
+    @media (max-width: 320px){
+    
+        .climateContainer {
+            padding-top: 15px;
+            margin-right: 6px;
+            width: 100px;
+            .place {
+                font-size: 12px;
+
+            }
+            img{
+                width: 30px;
+            }
+                span {
+                    font-size: 20px;
+                }
+            }
+    
+    
+    }

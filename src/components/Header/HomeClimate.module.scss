@@ -12,3 +12,17 @@
 		padding: 10px;	
 	}
 }
+
+@media (min-width: 320px){
+
+	.headerContainer {
+		.logo {
+			padding: 10px;	
+			
+			img{
+				width: 100px;
+			}
+		}
+	}
+
+}
