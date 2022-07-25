@@ -83,8 +83,19 @@
 @media (max-width: 425px) {
     .inputContainer {
         input {
-            width: 12.2rem;
-            height: 1.5rem;
+            width: 21.5rem;
+            height: 2.5rem;
+            margin-top: 10px;
+            font-size:15px
+        }
+    }
+
+}
+@media (max-width: 375px) {
+    .inputContainer {
+        input {
+            width: 18.5rem;
+            height: 2.5rem;
             margin-top: 10px;
             font-size:15px
         }
@@ -94,8 +105,8 @@
 @media (max-width: 320px) {
     .inputContainer {
         input {
-            width: 10rem;
-            height: 1.5rem;
+            width: 15.5rem;
+            height: 2.5rem;
             margin-top: 10px;
             font-size:15px
         }

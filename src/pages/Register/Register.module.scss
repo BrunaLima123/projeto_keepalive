@@ -125,7 +125,7 @@
 					
 		}
 	}
-		.registerContainer{
+		.loginContainer{
 			font-size: 30px;
 		}
 	}
@@ -153,7 +153,7 @@
 				.formTitle {
 				font-size: 20px;
 				}
-			.registerContainer{
+			.loginContainer{
 				font-size: 10px;
 			}
 		}
@@ -178,7 +178,7 @@
 			.formTitle {
 			font-size: 20px;
 			}
-		.registerContainer{
+		.loginContainer{
 			font-size: 12px;
 		}
 	}
@@ -192,13 +192,15 @@
 		width: 100%;
 
 		.login {
+			width: 100%;
+			padding: 20px;
 			.titleContainer{
 				.title {
-					font-size: 20px;
+					font-size: 28px;
 					margin:0px
 				}
 				.text {
-					font-size: 10px;
+					font-size: 12px;
 				
 				}
 			}
@@ -207,9 +209,10 @@
 			.formTitle {
 			font-size: 20px;
 			}
-		.registerContainer{
-			font-size: 12px;
-		}
+		.loginContainer{
+			font-size: 15px;
+		}	
+	
 	}
 
 }
